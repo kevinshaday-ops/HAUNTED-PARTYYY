@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Música de fondo -->
+  <audio id="bg-music" autoplay loop>
+    <source src="audiox.mp4" type="audio/mp4">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <!-- Botón para mutear música -->
+  <button id="muteBtn">🔊</button>
+
+  <!-- Contenido principal -->
+  <div class="content">
+    <h1></h1>
+    <div class="buttons">
+      <!-- Botón WhatsApp -->
+      <a href="https://wa.me/59168982912?text=Hola%20buenas,%20hay%20entradas%3F" target="_blank" class="btn">
+        📲 WhatsApp Entradas 
+      </a>
+
+      <!-- Botón Google Maps -->
+      <a href="https://www.google.com/maps/place/-14.813315709289265, -64.90016532587093" target="_blank" class="btn">
+        📍 Ver Ubicación   
+      </a>
+
+      <!-- Botón Mesa -->
+      <a href="mesa.html" class="btn">
+        Mesas disponibles
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    const muteBtn = document.getElementById("muteBtn");
+
+    muteBtn.addEventListener("click", () => {
+      if (music.muted) {
+        music.muted = false;
+        muteBtn.textContent = "🔊";
+      } else {
+        music.muted = true;
+        muteBtn.textContent = "🔇";
+      }
+    });
+  </script>
+</body>
+</html>
+

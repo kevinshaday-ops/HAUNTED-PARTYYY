@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantalla Halloween</title>
+  <style>
+    /* Quitar márgenes y asegurar que ocupe toda la pantalla */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    /* Imagen de fondo ocupando toda la página */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Imagen pequeña en el centro */
+    .center-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 300px; /* Ajusta el tamaño de la imagen central */
+      width: 80%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Imagen de fondo -->
+  <img src="fondo.png" alt="Fondo Halloween" class="background">
+
+  <!-- Imagen central -->
+  <img src="logoo.png" alt="Imagen central" class="center-img">
+
+  <script>
+    // Redirigir después de 4 segundos
+    setTimeout(() => {
+      window.location.href = "menu.html";
+    }, 4000);
+  </script>
+</body>
+</html>

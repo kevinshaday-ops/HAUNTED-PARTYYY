@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesa Disponible</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Fondo específico para la página de mesa */
+    body {
+      background: url("mesa.jpeg") no-repeat center center/cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- Música de fondo (opcional, puede ser la misma o no) -->
+  <audio id="bg-music" autoplay loop>
+    <source src="audiox.mp4" type="audio/mp4">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <!-- Botón mute -->
+  <button id="muteBtn">🔊</button>
+
+  <div class="content">
+    <h1></h1>
+    <div class="buttons">
+      <!-- WhatsApp con mensaje de mesa -->
+      <a href="https://wa.me/59168982912?text=Hola,%20quisiera%20saber%20si%20aún%20hay%20mesa%20disponible." 
+         target="_blank" class="btn">
+        📲 WhatsApp Mesa
+      </a>
+      <!-- Botón para volver -->
+      <a href="menu.html" class="btn">⬅️ Volver</a>
+    </div>
+  </div>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    const muteBtn = document.getElementById("muteBtn");
+
+    muteBtn.addEventListener("click", () => {
+      music.muted = !music.muted;
+      muteBtn.textContent = music.muted ? "🔇" : "🔊";
+    });
+  </script>
+</body>
+</html>
