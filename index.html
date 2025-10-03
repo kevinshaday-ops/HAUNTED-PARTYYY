@@ -5,15 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pantalla Halloween</title>
   <style>
-    /* Quitar márgenes y asegurar que ocupe toda la pantalla */
+    /* Reset y pantalla completa */
     body, html {
       margin: 0;
       padding: 0;
       height: 100%;
       overflow: hidden;
+      font-family: 'Creepster', cursive; /* Estilo Halloween */
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
 
-    /* Imagen de fondo ocupando toda la página */
+    /* Imagen de fondo */
     .background {
       position: fixed;
       top: 0;
@@ -24,16 +30,36 @@
       z-index: -1;
     }
 
-    /* Imagen pequeña en el centro */
+    /* Imagen central */
     .center-img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 300px; /* Ajusta el tamaño de la imagen central */
+      max-width: 500px;
       width: 80%;
+      margin-bottom: 5px;
+      
+    }
+
+    /* Botón estilo zombie */
+    .zombie-btn {
+      background-color: orange;
+      color: #000;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 15px 20px;
+      border: 3px solid #ff6600;
+      border-radius: 12px;
+      cursor: pointer;
+      text-shadow: 2px 2px #000;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px #ff6600, 0 0 40px #ff3300;
+    }
+
+    .zombie-btn:hover {
+      transform: scale(1.1) rotate(-5deg);
+      box-shadow: 0 0 30px #ff6600, 0 0 60px #ff3300;
     }
   </style>
+  <!-- Fuente estilo Halloween -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Imagen de fondo -->
@@ -42,11 +68,8 @@
   <!-- Imagen central -->
   <img src="logoo.png" alt="Imagen central" class="center-img">
 
-  <script>
-    // Redirigir después de 4 segundos
-    setTimeout(() => {
-      window.location.href = "menu.html";
-    }, 4000);
-  </script>
+  <!-- Botón -->
+  <button class="zombie-btn" onclick="window.location.href='menu.html'">ENTRAR</button>
 </body>
 </html>
+
